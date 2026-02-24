@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOEIC Flashcards Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="stats" id="stats">残り: 0語</div>
+
+    <div class="card-container" onclick="flipCard()">
+        <div class="card" id="card">
+            <div class="card-face card-front">
+                <div class="word" id="word-front">Ready?</div>
+                <div class="hint">タップで裏返す</div>
+            </div>
+            <div class="card-face card-back">
+                <div class="meaning" id="meaning-back">意味</div>
+                <div class="example" id="example-back">例文</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="btn-next" onclick="nextCard()">スキップ</button>
+        <button class="btn-done" onclick="markAsLearned()">覚えた！</button>
+    </div>
+
+    <div class="add-form" style="margin-top: 40px; display: flex; flex-direction: column; gap: 10px; width: 320px;">
+    <input type="text" id="new-en" placeholder="英単語を入力" style="padding: 12px; border-radius: 8px; border: 1px solid #ccc;">
+    <input type="text" id="new-jp" placeholder="日本語の意味を入力" style="padding: 12px; border-radius: 8px; border: 1px solid #ccc;">
+    <button onclick="addNewWord()" style="background: #007AFF; color: white; padding: 12px; border-radius: 8px; border: none; font-weight: bold;">単語帳に追加</button>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
